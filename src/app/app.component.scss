@@ -1,0 +1,36 @@
+.main-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.card {
+    max-width: 400px;
+  }
+
+#floorSelect {  
+    box-shadow:0 0 5px #362E2B;
+    
+    ul {        
+     
+      span {
+        width:50px;
+        float:left;
+        text-align:center;
+        height:50px;     
+        line-height:50px;
+        border:1px solid #AAA;
+        margin:13px;
+        transition:all 300ms;
+        border-radius:50%;
+        border:2px solid #DDD;
+        
+            &:hover {
+                background:#656565;
+                color:#FFF;
+                cursor:pointer;
+                transition:all 300ms;    
+            }
+        }
+  
+    }
+}
