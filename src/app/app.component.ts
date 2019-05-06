@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
   }
 
   callElevator(): void {
-    debugger
     while (!this.passengers.every(p => p.arrived)) {
       const passenger = this.findClosest();
       this.elevator.passengers.push(passenger);
