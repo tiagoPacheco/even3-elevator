@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Demo
-https://even3-elevator.herokuapp.com/
+[Live Demo](https://even3-elevator.herokuapp.com/)
 
 ## Development server
 
