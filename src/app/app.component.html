@@ -14,7 +14,7 @@
           </mat-form-field>
 
           <mat-form-field>
-            <input type="number" min="0" matInput placeholder="Quantidade de pessoas esperando elevador"
+            <input type="number" min="0" matInput placeholder="Quantidade de passageiros"
               [(ngModel)]="numberOfPassengers">
           </mat-form-field>
 
@@ -47,7 +47,8 @@
   <div class="info" *ngIf="totalFloors && totalFloorsList.length > 0">
     <mat-list>
       <mat-divider></mat-divider>
-      <mat-list-item>Andares pecorridos: <span *ngIf="elevator.elapsedFloor > 0">{{elevator.elapsedFloor}}</span></mat-list-item>
+      <mat-list-item>Andares pecorridos: <span *ngIf="elevator.elapsedFloor > 0">{{elevator.elapsedFloor}}</span>
+      </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>Andar atual: {{elevator.currentFloor}}</mat-list-item>
       <mat-divider></mat-divider>
@@ -55,9 +56,11 @@
   </div>
 
   <div class="elevator" *ngIf="totalFloors">
-    <div class="square" *ngFor="let item of totalFloorsList; let i = index">
-      <div [ngClass]="{'elevator-in-floor': elevator.currentFloor == i}">
-        {{item.floor}}
+    <div class="elevator-floor" *ngFor="let item of totalFloorsList; let i = index">      
+      <div class="square">
+        <div [ngClass]="{'elevator-in-floor': elevator.currentFloor == i}">
+          {{item.floor}}
+        </div>
       </div>
     </div>
   </div>

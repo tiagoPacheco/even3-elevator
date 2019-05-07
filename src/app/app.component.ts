@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   }
 
   async callElevator() {
+
     while (!this.passengers.every(p => p.arrived)) {
       const passenger = this.findClosest();
       this.elevator.passengers.push(passenger);
@@ -79,7 +80,7 @@ export class AppComponent implements OnInit {
 
   private async handleElevator(floor: number) {
     const passengersOnRoute: Array<Passenger> = this.passengers.filter(p => p.currentFloor === floor);
-    this.elevator.passengers.concat(passengersOnRoute);
+    this.elevator.passengers.push(...passengersOnRoute);
     this.elevator.passengers.forEach(ep => {
       if (ep.targetFloor === floor) {
         const passengerInElevator = this.passengers.find(p => p.index === ep.index);

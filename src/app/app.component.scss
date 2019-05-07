@@ -16,16 +16,25 @@
 
 .elevator {
     padding-right: 200px;    
+
+    .elevator-floor {
+        display: flex;
+        align-items: center;
+
+        .passenger {
+            padding-right: 10px;
+        }
+    }
 }
 
 .square {
     position: relative;
     width: 70px;
     height: 35px;
-    border: 1px solid red;
+    border: 1px solid #00000052;
 
     .elevator-in-floor {
-        background: aqua;
+        background: #66ffe4b3;
         -webkit-transition: background-color 1s ease-out;
         -moz-transition: background-color 1s ease-out;
         -o-transition: background-color 1s ease-out;
