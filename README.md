@@ -13,8 +13,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 After load the app, you need to fill some properties:
 
-* Total number of floors in the building
-* Initial elevator position
-* Number of passengers
+* `Total number of floors in the building`
+* `Initial elevator position`
+* `Number of passengers`
 
 After fill this properties, you will click on button "Send". Then, you will fill the passenger parameters. And finally, you will click at "Call elevator" and the elevator animation will start.
